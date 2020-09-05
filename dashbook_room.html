@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Choose Your Room</title>
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<link rel="icon" href="-B.png" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="style.css">
+<style>
+	#room_to_add{
+	color:blue;
+	}
+	input::placeholder {
+  color: red;
+
+  opacity: 1;
+}
+::-webkit-input-placeholder { /* Edge */
+  color: red;
+
+  opacity: 1;
+}
+
+:-ms-input-placeholder { /* Internet Explorer */ 
+  color: red;
+  opacity: 1;
+}
+
+</style>
+
+</head>
+<body>
+	
+<div class="container">
+<button id="logout" class="glyphicon glyphicon-log-out btn btn-danger" onclick="logout()">Logout</button>
+<h4 class='btn btn-success' id="wel"></h4>
+	<center>
+		<h1 class="header">	
+			Dashbook
+		</h1>
+		<h3 class="color_white"></h3>
+		<div class="form-group input_div_room_page">
+			<label>#Add Room:</label>
+			<input type="text"placeholder="CRASH YOUR WORLDROOM"class="form-control"id="room_to_add">
+
+		</div>
+		<button class="btn btn-success" onclick="addRoom()">#Add Room</button>
+		<input id='myInput' placeholder="Search in Rooms" onkeydown="search()">
+		<h3 class="color_white">#@/$TRENDINGROOMS₹\@#</h3>
+		<div class="bg-primary text-success" id="output"></div>
+	
+	</center>
+</div>
+<script src="kwitter_room.js">
+	
+</script>
+</body>
+</html>

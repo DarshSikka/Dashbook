@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width:device.width, initial-scale:1.0">
+        <link rel="icon" href="-B.png">
+		<title>Chat in Dashbook</title>
+		<link rel='stylesheet' href='https://drive.google.com/file/d/1nqLCKF5FBuSRIT16wUiRtCad35e2Ii-Q/'>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet"><meta name="viewport" content="width=device-width, initial-scale=10">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script>
+	tinymce.init({
+	  selector: "#Message",
+	  plugins: "emoticons",
+	  toolbar: "emoticons",
+	  toolbar_location: "bottom",
+	  menubar: false
+	});
+  </script>
+  
+  
+</head>
+<body>
+	<nav class="navbar-inverse" style="position:sticky; z-index: 9999; top:0">
+		<div class="navbar-header">
+			<button type="button" data-toggle="collapse" data-target="#ribbon" class="navbar-toggle">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+		</div>
+		<ul Class="menu">
+			<div class="collapse navbar-collapse" id="ribbon">
+				<button class='toggle'onclick='toggle()'> Read </button>&nbsp;
+				<button class='toggle'onclick='toggle2()'>Write</button>
+			</div>
+		</ul>
+	</nav>
+<div class="container">
+	<button id="logout" class="glyphicon glyphicon-log-out btn btn-danger" onclick="logout()">Logout</button>
+	<center>
+		<h1 class="header" id='roomNameVal'>	
+			Dashbook
+		</h1>
+	</center>
+</div>
+<center>
+    <div class="col-lg-8 col-md-8 col-sm-10 col-xs-12" id="chat"></div>
+</center>
+<center>
+	
+	<div class="input_div_message_page" id='mess'>
+		<div id='image-attachment'></div>
+		<div id='photo'><img id='Photo'></div>
+        <label>Send:</label><br>
+		<textarea id="Message" placeholder="Type a message here"></textarea><br><span>
+		</span>
+		<br>
+		<button class="btn btn-success" onclick="photoMessage()">Photo Message</button>
+		<button class='btn btn-success' onclick="photoTake()">Click Photo and Send it</button>
+		<button class="btn btn-success" onclick="send()">Send</button>
+	</div>
+</center>
+<script src="kwitter_page.js"></script>
+</body>
+</html>
