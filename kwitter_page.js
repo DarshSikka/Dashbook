@@ -78,7 +78,7 @@ function updateLaugh(ha){
 function logout(){//logs out of the system, back to login page
     localStorage.removeItem("youTheUser");
     localStorage.removeItem("roomname");
-    window.location="dashbook.html";
+    window.location="index.html";
 }
 var message="";
 function send(){//Sends text message
