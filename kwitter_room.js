@@ -41,7 +41,7 @@ document.getElementById("wel").innerHTML="Welcome "+localStorage.getItem("youThe
 function logout(){
       localStorage.removeItem("youTheUser");
       localStorage.removeItem("roomname");
-      window.location="dashbook.html";
+      window.location="index.html";
 }
 function search(){
 var input, filter, ul, li, a, i, txtValue;
